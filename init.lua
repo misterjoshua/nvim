@@ -40,3 +40,10 @@ vim.opt.termguicolors = true
 require "nvim-tree".setup{
 }
 
+-- Remap copilot completion to ctrl j
+vim.keymap.set('i', '<C-J>', 'copilot#Accept("\\<CR>")', {
+  expr = true,
+  replace_keycodes = false
+})
+vim.g.copilot_no_tab_map = true
+
